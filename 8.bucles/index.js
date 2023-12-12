@@ -101,7 +101,6 @@ for(let key in personas){
 
 for(let persona of personas){
     for( let key in persona){
-        console.log(persona)
         if(key == "edad" && persona[key] > 25){
             console.log("la propiedad", key, "tiene el valor", persona[key])
         }
