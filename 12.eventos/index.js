@@ -1,9 +1,9 @@
-function saluda(){
-    console.log("Hola");
+function saluda(nombre, evento){
+    console.log("Hola", nombre, evento);
 }
 
-function adios(){
-    console.log("Adios");
+function adios(evento){
+    console.log("Adios", evento);
 }
 
 let buttonAdios = document.querySelector('.adios');
@@ -28,11 +28,11 @@ div1.addEventListener('mouseout', function(){
 let input = document.createElement('input');
 document.body.appendChild(input);
 
-input.addEventListener('focus', function(){
-    console.log("tengo el foco");
+input.addEventListener('focus', function(ev){
+    console.log("tengo el foco", ev.target);
 })
-input.addEventListener('input', function(){
-    console.log("tecleo ", input.value);
+input.addEventListener('input', function(ev){
+    console.log("tecleo ", input.value, ev);
 })
 input.addEventListener('change', function(){
     console.log("cambio a ", input.value);
@@ -47,3 +47,6 @@ let darkButton = document.querySelector('.dark');
 darkButton.addEventListener('click', function(){
     buttonAdios.classList.toggle('noche')
 })
+
+
+darkButton.addEventListener('click', (ev) => saluda("pepe", ev))
