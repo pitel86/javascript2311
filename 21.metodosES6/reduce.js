@@ -44,3 +44,11 @@ const vengadores = [
 
 const precioTotal = carrito.reduce((total, prenda) => prenda.exento ? total + prenda.precio*prenda.cantidad: total + prenda.precio*prenda.cantidad*1.21 , 0)
 console.log(precioTotal)
+
+const numeros = [5, 7 ,8]
+
+console.log(numeros.reduce((total, numero) => total + numero, 0))
+
+const textos = ["juan", "pepe", "maria"]
+
+console.log(textos.reduce((total, texto) => total + texto, ""))
